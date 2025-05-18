@@ -1,0 +1,77 @@
+# C++ specific
+*.o
+*.obj
+*.so
+*.a
+*.dll
+*.dylib
+*.lib
+*.exe
+*.out
+*.app
+main_app
+
+# Dependency directories
+dependencies/
+libs/
+lib/
+vendor/
+
+# Build directories
+build/
+debug/
+release/
+bin/
+obj/
+x64/
+Win32/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+
+# Makefiles
+*.make
+*.mk
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor and IDE specific
+.vscode/
+.idea/
+.vs/
+*.swp
+*.swo
+*~
+*.user
+*.suo
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+
+# Project specific
+compile_commands.json
+.clangd/
+.cache/
