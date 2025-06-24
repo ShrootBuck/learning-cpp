@@ -1,67 +1,26 @@
 #include <iostream>
 
+double getTotal(double prices[], int size);
+
 int main() {
 
-    srand(time(0));
-    int choice;
+    double prices[] = {49.99, 15.05, 75, 9.99};
 
-    std::cout << "1. Rock\n2. Paper\n3. Scissors\n";
-    std::cin >> choice;
+    double total = getTotal(prices, sizeof(prices) / sizeof(double));
 
-    std::string winner = "Tie!";
+    std::cout << total;
 
-    int computerChoice = rand() % 3 + 1;
-
-    switch (computerChoice) {
-    case 1:
-        std::cout << "Computer choses Rock";
-        break;
-    case 2:
-        std::cout << "Computer choses Paper";
-        break;
-    case 3:
-        std::cout << "Computer choses Scissors";
-        break;
-    }
-
-    switch (choice) {
-    case 1:
-        switch (computerChoice) {
-        case 2:
-            winner = "computer";
-            break;
-        case 3:
-            winner = "player";
-            break;
-        }
-        break;
-
-    case 2:
-        switch (computerChoice) {
-        case 1:
-            winner = "player";
-            break;
-        case 3:
-            winner = "computer";
-            break;
-        }
-        break;
-
-    case 3:
-        switch (computerChoice) {
-        case 1:
-            winner = "computer";
-            break;
-        case 2:
-            winner = "player";
-            break;
-        }
-        break;
-    }
-
-    std::cout << winner;
-
-    //////////
+    /////////////////////////////////////////////////////////////////////
     std::cout << std::endl;
     return 0;
+}
+
+double getTotal(double prices[], int size) {
+    double total = 0;
+
+    for (int i = 0; i < size; i++) {
+        total += prices[i];
+    }
+
+    return total;
 }
